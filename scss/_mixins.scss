@@ -1,0 +1,36 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexTotal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+@mixin grid($qtd, $gap) {
+  display: grid;
+  grid-template-columns: repeat($qtd, 1fr);
+  gap: $gap;
+}
