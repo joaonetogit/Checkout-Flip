@@ -2,15 +2,34 @@
   display: flex;
 }
 
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 form {
   padding: 2.4rem;
-  max-width: 40rem;
+  max-width: 73.6rem;
   margin: auto;
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 64px;
 }
 
 #credit-card {
-  width: 32.8rem;
-  height: 21.2rem;
+  margin-top: 1.6rem;
+  width: 28rem;
+  height: 16.8rem;
   perspective: 60rem;
 
   &:active,
@@ -23,7 +42,8 @@ form {
     }
   }
 
-  div {
+  .front,
+  .back {
     width: inherit;
     height: inherit;
     position: absolute;
@@ -47,10 +67,10 @@ form {
 }
 
 .inputs {
-  margin-top: 4.8rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  max-width: 328px;
 
   label {
     font-weight: 600;
@@ -104,7 +124,7 @@ form {
 }
 
 .info-security {
-  margin-top: 4.8rem;
+  margin-top: 20rem;
   @include flexCenter;
   justify-content: center;
   gap: 0.8rem;
@@ -113,7 +133,8 @@ form {
 }
 
 button {
-  margin-top: 10rem;
+  width: 100%;
+  margin-top: 4.8rem;
   background: #9333ea;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
