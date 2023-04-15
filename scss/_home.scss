@@ -75,6 +75,22 @@ form {
     &:focus {
       outline: 0.15rem solid #9333ea;
     }
+
+    &:invalid:focus {
+      border: 0.15rem solid #fb7185;
+
+      & + .warning {
+        font-size: 1.4rem;
+        margin-top: 0.8rem;
+        color: #fb7185;
+        @include flexCenter;
+        gap: 0.4rem;
+      }
+    }
+
+    + .warning {
+      display: none;
+    }
   }
 
   .row {
