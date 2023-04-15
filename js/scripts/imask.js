@@ -6,6 +6,13 @@ IMask(document.querySelector('#cc-number'), {
   mask: '0000 0000 0000 0000',
 });
 
+IMask(document.querySelector('#cc-holder'), {
+  mask: /^[A-Za-z\s]+$/,
+  prepare: function (str) {
+    return str.toUpperCase();
+  },
+});
+
 IMask(document.querySelector('#cc-validity'), {
   mask: 'MM{/}YY',
   blocks: {
