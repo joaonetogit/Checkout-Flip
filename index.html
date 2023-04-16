@@ -20,15 +20,45 @@
     <main>
       <form action="">
         <section class="content-row">
-          <section id="credit-card">
-            <div class="front"></div>
-            <div class="back"></div>
+          <section class="card">
+            <div class="cc">
+              <div class="front">
+                <div class="cc-logo">
+                  <span
+                    ><img
+                      src="img/cc-visa.svg"
+                      alt="ícone do cartão de crédito selecionado"
+                  /></span>
+                  <span
+                    ><img src="img/cc-icon.svg" alt="ícone padrão de cartão"
+                  /></span>
+                </div>
 
+                <div class="cc-info">
+                  <div class="cc-number">1234 5678 9012 3456</div>
+
+                  <div class="cc-holder">
+                    <div class="value">FULANO DA SILVA</div>
+                  </div>
+
+                  <div class="cc-extra">
+                    <div class="cc-expiration">
+                      <div class="value">02/32</div>
+                    </div>
+                    <div class="cc-security">
+                      <div class="value">123</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="back"></div>
+            </div>
             <div class="info-security flex">
               <img src="/img/icon-shield.svg" alt="" />
               <p>Seus dados estão seguros</p>
             </div>
           </section>
+
           <section class="inputs flex">
             <div class="input-wrapper">
               <label for="cc-number">Número do cartão</label>

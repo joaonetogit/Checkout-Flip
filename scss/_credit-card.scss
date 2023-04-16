@@ -1,0 +1,88 @@
+.cc {
+  margin-top: 1.6rem;
+  width: 28rem;
+  height: 16.8rem;
+  perspective: 60rem;
+  position: relative;
+
+  &:active,
+  &:hover {
+    .front {
+      transform: rotateY(180deg);
+    }
+    .back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  .value {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 0 0.25rem 0.25rem rgb(22 22 22 / 16%);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 16px;
+    color: #f9fafb;
+    opacity: 0.5;
+  }
+
+  .front,
+  .back {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .front {
+    background: url('../img/credit-card-front.svg') no-repeat center;
+    background-size: contain;
+    transform: rotateY(0);
+  }
+
+  .back {
+    background: url('../img/credit-card-back.svg') no-repeat center;
+    transform: rotateY(-180deg);
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &-info,
+  &-holder,
+  &-expiration,
+  &-security {
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  &-number {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.9rem;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-shadow: 0 0.12rem 0.32rem rgb(23 23 23 / 40%);
+    position: relative;
+  }
+  &-extra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+}
