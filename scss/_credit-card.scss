@@ -5,6 +5,7 @@
   perspective: 60rem;
   position: relative;
 
+  &.hover,
   &:active,
   &:hover {
     .front {
@@ -40,7 +41,7 @@
   }
 
   .front {
-    padding: 2.4rem 1.8rem;
+    padding: 1.6rem 2.4rem 2.4rem;
     background: url('../img/credit-card-front.png') no-repeat center;
     background-size: contain;
     transform: rotateY(0);

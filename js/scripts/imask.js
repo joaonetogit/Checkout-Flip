@@ -1,24 +1,63 @@
-const ccCvv = document.querySelector('#cc-cvv');
-const ccNumber = document.querySelector('#cc-number');
-const ccHolder = document.querySelector('#cc-holder');
-const ccValidity = document.querySelector('#cc-validity');
+const ccInputCvv = document.querySelector('#cc-cvv');
+const ccInputNumber = document.querySelector('#cc-number');
+const ccInputHolder = document.querySelector('#cc-holder');
+const ccInputValidity = document.querySelector('#cc-validity');
 
-IMask(ccCvv, {
+// Inputs
+IMask(ccInputCvv, {
   mask: '000',
 });
 
-IMask(ccNumber, {
-  mask: '0000 0000 0000 0000',
+IMask(ccInputNumber, {
+  mask: [
+    {
+      mask: '0000 0000 0000 0000',
+      regex: /^4\d{0,15}/,
+      cardType: 'visa',
+    },
+    {
+      mask: '0000 0000 0000 0000',
+      regex: /(^5[1-5]\d{0,2}|^22[2-9]\d|^2[3-7]\d{0,2})\d{0,12}/,
+      cardType: 'mastercard',
+    },
+    {
+      mask: '0000 0000 0000 0000',
+      regex: /^6360\d{0,12}/,
+      cardType: 'elo',
+    },
+    {
+      mask: '0000 0000 0000 0000',
+      cardType: 'default',
+    },
+  ],
+  dispatch: function (appended, dynamicMasked) {
+    const number = (dynamicMasked.value + appended).replace(/\D/g, '');
+
+    const foundMask = dynamicMasked.compiledMasks.find(function (item) {
+      return number.match(item.regex);
+    });
+
+    setCardType(
+      foundMask.cardType === 'elo'
+        ? 'elo'
+        : foundMask.cardType === 'mastercard'
+        ? 'mastercard'
+        : 'visa',
+    );
+
+    // console.log(foundMask);
+    return foundMask;
+  },
 });
 
-IMask(ccHolder, {
+IMask(ccInputHolder, {
   mask: /^[A-Za-z\s]+$/,
   prepare: function (str) {
     return str.toUpperCase();
   },
 });
 
-IMask(ccValidity, {
+IMask(ccInputValidity, {
   mask: 'MM{/}YY',
   blocks: {
     MM: {
