@@ -1,19 +1,24 @@
-IMask(document.querySelector('#cc-cvv'), {
-  mask: '0000',
+const ccCvv = document.querySelector('#cc-cvv');
+const ccNumber = document.querySelector('#cc-number');
+const ccHolder = document.querySelector('#cc-holder');
+const ccValidity = document.querySelector('#cc-validity');
+
+IMask(ccCvv, {
+  mask: '000',
 });
 
-IMask(document.querySelector('#cc-number'), {
+IMask(ccNumber, {
   mask: '0000 0000 0000 0000',
 });
 
-IMask(document.querySelector('#cc-holder'), {
+IMask(ccHolder, {
   mask: /^[A-Za-z\s]+$/,
   prepare: function (str) {
     return str.toUpperCase();
   },
 });
 
-IMask(document.querySelector('#cc-validity'), {
+IMask(ccValidity, {
   mask: 'MM{/}YY',
   blocks: {
     MM: {
