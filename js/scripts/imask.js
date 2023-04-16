@@ -51,7 +51,7 @@ IMask(ccInputNumber, {
 });
 
 IMask(ccInputHolder, {
-  mask: /^[A-Za-z\s]+$/,
+  mask: /^[A-Za-z\s]{0,25}$/,
   prepare: function (str) {
     return str.toUpperCase();
   },
