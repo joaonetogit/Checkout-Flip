@@ -16,14 +16,14 @@
   }
 
   .value {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-shadow: 0 0.25rem 0.25rem rgb(22 22 22 / 16%);
-    text-transform: uppercase;
     font-size: 14px;
     line-height: 16px;
     color: #f9fafb;
     opacity: 0.5;
+  }
+
+  .letter-spacing {
+    letter-spacing: 0.6rem;
   }
 
   .front,
@@ -40,14 +40,26 @@
   }
 
   .front {
-    background: url('../img/credit-card-front.svg') no-repeat center;
+    padding: 2.4rem 1.8rem;
+    background: url('../img/credit-card-front.png') no-repeat center;
     background-size: contain;
     transform: rotateY(0);
   }
 
   .back {
-    background: url('../img/credit-card-back.svg') no-repeat center;
+    background: url('../img/credit-card-back.png') no-repeat center;
     transform: rotateY(-180deg);
+
+    .cc-security {
+      position: absolute;
+      bottom: 48px;
+      right: 75px;
+
+      .value {
+        color: #111827;
+        opacity: 0.5;
+      }
+    }
   }
 
   &-logo {
@@ -57,24 +69,12 @@
     position: relative;
   }
 
-  &-info,
-  &-holder,
-  &-expiration,
-  &-security {
-    display: grid;
-    gap: 1.4rem;
+  &-info {
+    margin-top: 4rem;
   }
 
-  &-number {
-    font-size: 2.4rem;
-    font-weight: bold;
-    line-height: 2.9rem;
-    letter-spacing: 0.04em;
-    color: #fff;
-    text-shadow: 0 0.12rem 0.32rem rgb(23 23 23 / 40%);
-    position: relative;
-  }
   &-extra {
+    margin-top: 2.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
