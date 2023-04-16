@@ -17,21 +17,21 @@ const cardNumber = document.querySelector('.card-number');
 const ccValidity = document.querySelector('#cc-validity');
 const cardValidity = document.querySelector('.cc-expiration .value');
 
-ccHolder.addEventListener('input', () => {
+ccHolder.addEventListener('keyup', () => {
   cardHolder.innerText =
     ccHolder.value.length > 0 ? ccHolder.value : 'NOME DO TITULAR';
 });
 
-ccCvv.addEventListener('input', () => {
+ccCvv.addEventListener('keyup', () => {
   cardCvv.innerText = ccCvv.value.length > 0 ? ccCvv.value : '***';
 });
 
-ccNumber.addEventListener('input', () => {
+ccNumber.addEventListener('keyup', () => {
   cardNumber.innerText =
     ccNumber.value.length > 0 ? ccNumber.value : '**** **** **** ****';
 });
 
-ccValidity.addEventListener('input', () => {
+ccValidity.addEventListener('keyup', () => {
   cardValidity.innerText =
     ccValidity.value.length > 0 ? ccValidity.value : '**/**';
 });
