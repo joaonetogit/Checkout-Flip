@@ -17,7 +17,7 @@ Pode ser visto no link https://checkout-flip.netlify.app/
 Certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 - Node.js (versão 12 ou superior)
-- NPM (gerenciador de pacotes do Node.js)
+- YARN (gerenciador de pacotes do Node.js)
 
 ## Instalação
 
@@ -38,7 +38,7 @@ Siga as instruções abaixo para configurar e executar o projeto localmente:
 3. Instale as dependências do projeto utilizando o NPM:
 
    ```
-   npm install
+   yarn install
    ```
 
 ## Uso
@@ -46,7 +46,7 @@ Siga as instruções abaixo para configurar e executar o projeto localmente:
 Após a instalação, você pode executar o projeto localmente com o seguinte comando:
 
 ```
-npm start
+yarn dev
 ```
 
 Isso iniciará o servidor e você poderá acessar o projeto no seu navegador através do endereço `http://localhost:3000`.
@@ -67,4 +67,4 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ## Contato
 
-Se você tiver alguma dúvida ou sugestão em relação a este projeto, sinta-se à vontade para entrar em contato comigo através do e-mail [seu-email@example.com] ou visite meu perfil no GitHub [seu-perfil-github](https://github.com/seu-perfil-github).
+Se você tiver alguma dúvida ou sugestão em relação a este projeto, sinta-se à vontade para entrar em contato comigo através do e-mail [joaoneto.work@gmail.com] ou visite meu perfil no [meu GitHub](https://github.com/joaonetogit).
