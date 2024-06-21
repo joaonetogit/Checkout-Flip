@@ -17,5 +17,14 @@
     "gulp-uglify": "^3.0.2",
     "sass": "^1.52.1",
     "svgo": "^2.8.0"
+  },
+  "devDependencies": {
+    "@types/browser-sync": "^2.29.0",
+    "@types/gulp": "^4.0.17",
+    "@types/gulp-autoprefixer": "^0.0.37",
+    "@types/gulp-babel": "^6.1.33",
+    "@types/gulp-concat": "^0.0.37",
+    "@types/gulp-sass": "^5.0.4",
+    "@types/gulp-uglify": "^3.0.11"
   }
 }
